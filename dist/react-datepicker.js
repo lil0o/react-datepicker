@@ -371,7 +371,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        monthsShown: this.props.monthsShown,
 	        onDropdownFocus: this.handleDropdownFocus,
 	        onMonthChange: this.props.onMonthChange,
-	        className: this.props.calendarClassName },
+	        className: this.props.calendarClassName,
+	        wrapDay: this.props.wrapDay },
 	      this.props.children
 	    );
 	  },
@@ -403,8 +404,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      readOnly: this.props.readOnly,
 	      required: this.props.required,
 	      tabIndex: this.props.tabIndex,
-	      customInput: this.props.customInput,
-	      wrapDay: this.props.wrapDay });
+	      customInput: this.props.customInput });
 	  },
 	  renderClearButton: function renderClearButton() {
 	    if (this.props.isClearable && this.props.selected != null) {
@@ -5786,7 +5786,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectsStart: _react2.default.PropTypes.bool,
 	    showWeekNumber: _react2.default.PropTypes.bool,
 	    startDate: _react2.default.PropTypes.object,
-	    utcOffset: _react2.default.PropTypes.number
+	    utcOffset: _react2.default.PropTypes.number,
+	    wrapDay: _react2.default.PropTypes.bool
 	  },
 
 	  handleDayClick: function handleDayClick(day, event) {
