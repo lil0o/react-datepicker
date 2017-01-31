@@ -67,7 +67,8 @@ var Week = React.createClass({
             selectsEnd={this.props.selectsEnd}
             startDate={this.props.startDate}
             endDate={this.props.endDate}
-            utcOffset={this.props.utcOffset}/>
+            utcOffset={this.props.utcOffset}
+            wrapDay={this.props.wrapDay} />
       )
     }))
   },

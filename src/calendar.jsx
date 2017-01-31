@@ -57,7 +57,8 @@ var Calendar = React.createClass({
     showYearDropdown: React.PropTypes.bool,
     startDate: React.PropTypes.object,
     todayButton: React.PropTypes.string,
-    utcOffset: React.PropTypes.number
+    utcOffset: React.PropTypes.number,
+    wrapDay: React.PropTypes.bool
   },
 
   defaultProps: {
@@ -304,7 +305,8 @@ var Calendar = React.createClass({
                 startDate={this.props.startDate}
                 endDate={this.props.endDate}
                 peekNextMonth={this.props.peekNextMonth}
-                utcOffset={this.props.utcOffset}/>
+                utcOffset={this.props.utcOffset}
+                wrapDay={this.props.wrapDay}/>
           </div>
       )
     }

@@ -19,7 +19,8 @@ var Day = React.createClass({
     selectsEnd: React.PropTypes.bool,
     selectsStart: React.PropTypes.bool,
     startDate: React.PropTypes.object,
-    utcOffset: React.PropTypes.number
+    utcOffset: React.PropTypes.number,
+    wrapDay: React.PropTypes.bool
   },
   getDefaultProps () {
     return {
@@ -148,6 +149,14 @@ var Day = React.createClass({
     })
   },
 
+  renderDate () {
+    if (this.props.wrapDay)
+      return (
+        <span>{this.props.day.date()}</span>
+      )
+    return this.props.day.date()
+  },
+
   render () {
     return (
       <div
@@ -156,7 +165,7 @@ var Day = React.createClass({
           onMouseEnter={this.handleMouseEnter}
           aria-label={`day-${this.props.day.date()}`}
           role="option">
-          {this.props.day.date()}
+          {this.renderDate()}
       </div>
     )
   }

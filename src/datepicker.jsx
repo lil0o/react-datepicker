@@ -74,7 +74,8 @@ var DatePicker = React.createClass({
     title: React.PropTypes.string,
     todayButton: React.PropTypes.string,
     utcOffset: React.PropTypes.number,
-    withPortal: React.PropTypes.bool
+    withPortal: React.PropTypes.bool,
+    wrapDay: React.PropTypes.bool
   },
 
   getDefaultProps () {
@@ -98,7 +99,8 @@ var DatePicker = React.createClass({
       ],
       utcOffset: moment().utcOffset(),
       monthsShown: 1,
-      withPortal: false
+      withPortal: false,
+      wrapDay: false
     }
   },
 
@@ -325,7 +327,8 @@ var DatePicker = React.createClass({
         readOnly={this.props.readOnly}
         required={this.props.required}
         tabIndex={this.props.tabIndex}
-        customInput={this.props.customInput} />
+        customInput={this.props.customInput}
+        wrapDay={this.props.wrapDay} />
   },
 
   renderClearButton () {
