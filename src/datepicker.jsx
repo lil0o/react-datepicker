@@ -292,7 +292,8 @@ var DatePicker = React.createClass({
         monthsShown={this.props.monthsShown}
         onDropdownFocus={this.handleDropdownFocus}
         onMonthChange={this.props.onMonthChange}
-        className={this.props.calendarClassName}>
+        className={this.props.calendarClassName}
+        wrapDay={this.props.wrapDay}>
       {this.props.children}
     </WrappedCalendar>
   },
@@ -327,8 +328,7 @@ var DatePicker = React.createClass({
         readOnly={this.props.readOnly}
         required={this.props.required}
         tabIndex={this.props.tabIndex}
-        customInput={this.props.customInput}
-        wrapDay={this.props.wrapDay} />
+        customInput={this.props.customInput} />
   },
 
   renderClearButton () {

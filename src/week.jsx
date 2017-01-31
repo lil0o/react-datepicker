@@ -24,7 +24,8 @@ var Week = React.createClass({
     selectsStart: React.PropTypes.bool,
     showWeekNumber: React.PropTypes.bool,
     startDate: React.PropTypes.object,
-    utcOffset: React.PropTypes.number
+    utcOffset: React.PropTypes.number,
+    wrapDay: React.PropTypes.bool
   },
 
   handleDayClick (day, event) {
